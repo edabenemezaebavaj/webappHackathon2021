@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Veranstaltung Eintragen</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -9,41 +9,52 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <div class="container">
   <h2>Information zur Veranstaltung Eintragen </h2>
-  <form action="/action_page.php">
+  <form action="#">
     <div class="form-group">
-      <label for="email">Veranstaltungtitel</label>
-      <input type="email" class="form-control" id="email" placeholder="Veranstaltungtitel" name="email">
-    </div>
-
-
-    <div class="form-group">
-      <label for="pwd">Ort</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Ort" name="pwd">
-    </div>
-    <div class="form-group">
-      <label for="pwd">Datum</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Datum" name="pwd">
-    </div>
-
-    <div class="form-group">
-      <label for="pwd">Veranstaltungkategorie</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Veranstaltungkategorie" name="pwd">
-    </div>
-
-    <div class="form-group">
-      <label for="pwd">Ansprechperson:Name</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Veranstaltungkategorie" name="pwd">
-    </div>
-
-    <div class="form-group">
-      <label for="pwd">Foto</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Foto" name="pwd">
+      <label for="text">Veranstaltungtitel</label>
+      <input type="text" class="form-control" id="text" placeholder="z.B:Gottesdienst" name="titel">
     </div>
 
     
+    <div class="form-group">
+      <label for="text">Datum</label>
+      <input type="text" class="form-control" id="text" placeholder="30.10.2021" name="date">
+    </div>
+
+    <div class="form-group">
+      <label for="text">Ort</label>
+      <input type="text" class="form-control" id="text" placeholder="Eichenzell" name="ort">
+    </div>
+
+    <div class="form-group">
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Veranstaltungkategorie
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          
+            <label><input type="radio" name="belief">Glauben</label>
+            <label><input type="radio" name="sport">Sport und Spiele</label>
+            <label><input type="radio" name="music"> Musik und Tanz</label>
+            <label><input type="radio" name="fas"> Fasnacht</label>
+            <label><input type="radio" name="info">Informativ</label>
+            <label><input type="radio" name="more"> Weitere</label>
+
+        </ul>
+      </div>      
+    </div>
+
+    <div class="form-group">
+      <label for="text">Ansprechperson:Lisa-Maria Larbig</label>
+      <input type="text" class="form-control" id="text" placeholder="+49 (0) 6659 979 31" name="parnter">
+    </div>
+
+    <div class="form-group">
+      <label for="text"> Foto</label>
+      <input type="file" id="myFile" name="filename">
+    </div>
+
     <div class="checkbox">
       <label><input type="checkbox" name="remember"> Kamera</label>
     </div>
@@ -58,7 +69,7 @@
       <label><input type="checkbox" name="remember">Lotsen</label>
     </div>
 
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="btn btn-default">Abschicken</button>
   </form>
 </div>
 
